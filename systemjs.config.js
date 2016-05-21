@@ -5,9 +5,9 @@
     //map tells the System loader where to look for things
     var map = {
         'app': 'app',
-
         '@angular': 'https://npmcdn.com/@angular', // sufficient if we didn't pin the version
         'angular2-in-memory-web-api': 'https://npmcdn.com/angular2-in-memory-web-api', // get latest
+        'ng2-charts': 'https://npmcdn.com/ng2-charts',
         'rxjs': 'https://npmcdn.com/rxjs@5.0.0-beta.6',
         'ts': 'https://npmcdn.com/plugin-typescript@4.0.10/lib/plugin.js',
         'typescript': 'https://npmcdn.com/typescript@1.8.10/lib/typescript.js',
@@ -17,6 +17,7 @@
     var packages = {
         'app': {main: 'main.ts', defaultExtension: 'ts'},
         'rxjs': {defaultExtension: 'js'},
+        'ng2-charts': {defaultExtension: 'js'},
         'angular2-in-memory-web-api': {defaultExtension: 'js'},
     };
 

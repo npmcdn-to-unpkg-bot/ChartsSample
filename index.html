@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Angular 2 QuickStart</title>
+    <title>Angular 2 Charts Sample</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
@@ -14,6 +14,9 @@
     <script src="https://npmcdn.com/reflect-metadata@0.1.3"></script>
     <script src="https://npmcdn.com/systemjs@0.19.27/dist/system.src.js"></script>
 
+    <!-- Important: Embedding Chart.js in application is mandatory! -->
+    <script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+
     <!-- 2. Configure SystemJS -->
     <script src="systemjs.config.js"></script>
     <script>
@@ -25,6 +28,7 @@
 
 <!-- 3. Display the application -->
 <body>
+<line-chart-demo>Loading...</line-chart-demo>
 <my-app>Loading...</my-app>
 </body>
 </html>
