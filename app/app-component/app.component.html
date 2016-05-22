@@ -1,8 +1,10 @@
-<chart-graph-component></chart-graph-component>
-<input [(colorPicker)]="color2"
-       [style.background]="color2"
-       [cpPosition]="position"
-       [value]="color2"/>
-<button md-fab>
-    <md-icon class="md-24">add</md-icon>
-</button>
+<div>
+    <button md-fab style="position: absolute; top: 20px; right: 20px;">
+        <md-icon class="md-24">add</md-icon>
+    </button>
+    <chart-graph-component></chart-graph-component>
+    <input [(colorPicker)]="color2"
+           [style.background]="color2"
+           [cpPosition]="position"
+           [value]="color2"/>
+</div>
