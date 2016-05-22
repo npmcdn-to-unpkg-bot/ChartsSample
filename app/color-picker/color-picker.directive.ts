@@ -286,7 +286,7 @@ export class DialogComponent implements OnInit {
 
     setDialogPosition() {
         var node = this.directiveElementRef.nativeElement, position = 'static';
-        let parentNode = null;
+        let parentNode:any = null;
         while (node !== null && node.tagName !== 'HTML') {
             position = window.getComputedStyle(node).getPropertyValue("position");
             if (position !== 'static' && parentNode === null) {
@@ -423,7 +423,7 @@ export class DialogComponent implements OnInit {
         this.closeColorPicker();
     }
 
-    isDescendant(parent, child) {
+    isDescendant(parent:any, child:any) {
         var node = child.parentNode;
         while (node !== null) {
             if (node === parent) {
@@ -434,7 +434,7 @@ export class DialogComponent implements OnInit {
         return false;
     }
 
-    createBox(element, offset) {
+    createBox(element:any, offset:any) {
         return {
             top: element.getBoundingClientRect().top + (offset ? window.pageYOffset : 0),
             left: element.getBoundingClientRect().left + (offset ? window.pageXOffset : 0),

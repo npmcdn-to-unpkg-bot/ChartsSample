@@ -1,19 +1,21 @@
-import {Component} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {ColorPickerDirective} from "./color-picker/color-picker.directive";
+import {ChartGraphDirective} from "./chart-component/chart.directive";
+import {ChartService} from "./chart-component/chart.service.ts";
 
 @Component({
-    selector: 'my-app',
+    selector: 'main-app',
     templateUrl: 'app/app.component.html',
-    directives: [ColorPickerDirective]
+    directives: [ColorPickerDirective, ChartGraphDirective],
+    providers: [
+        ChartService
+    ]
 })
+export class AppComponent implements OnInit {
+    private color2:string = "#127bdc";
+    private position:string = "top";
 
-export class AppComponent {
-    private color:string = "#127bdc";
-    private color2:string = "hsla(300,82%,52%)";
-    private color3:string = "#fff500";
-    private color4:string = "rgb(236,64,64)";
-    private color5:string = "rgba(45,208,45,1)";
-    private color6:string = "#1973c0";
-    private color7:string = "#f200bd";
-    private color8:string = "#a8ff00";
+    ngOnInit() {
+        console.log("ngOnInit");
+    }
 }
