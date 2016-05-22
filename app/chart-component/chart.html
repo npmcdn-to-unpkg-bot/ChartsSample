@@ -1,10 +1,8 @@
-<div class="col-md-6" style="width: 100%; height: 100%; display: block;">
-    <base-chart style="width: 100%; height: 100%; display: block;"
-                class="chart"
-                [datasets]="chartService.dataSet"
-                [labels]="chartGraphLabels"
-                [options]="chartGraphOptions"
-                [colors]="chartService.colors"
-                [legend]="chartGraphLegend"
-                [chartType]="chartGraphType"></base-chart>
-</div>
+<base-chart style="width: 100%; height: 100%; display: block;"
+            class="chart"
+            [datasets]="chartService.dataSet"
+            [labels]="chartGraphLabels"
+            [options]="chartGraphOptions"
+            [colors]="chartService.colors"
+            [legend]="chartGraphLegend"
+            [chartType]="chartGraphType"></base-chart>
