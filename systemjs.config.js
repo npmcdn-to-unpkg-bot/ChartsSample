@@ -2,6 +2,23 @@
 
     var ngVer = '@2.0.0-rc.1'; // lock in the angular package version; do not let it float to current!
 
+    const components = [
+        'button',
+        // 'card',
+        // 'checkbox',
+        // 'grid-list',
+        'icon',
+        // 'input',
+        // 'list',
+        // 'progress-bar',
+        // 'progress-circle',
+        // 'radio',
+        // 'sidenav',
+        // 'slide-toggle',
+        // 'tab-group',
+        // 'toolbar'
+    ];
+
     //map tells the System loader where to look for things
     var map = {
         'app': 'app',
@@ -11,7 +28,9 @@
         'rxjs': 'https://npmcdn.com/rxjs@5.0.0-beta.6',
         'ts': 'https://npmcdn.com/plugin-typescript@4.0.10/lib/plugin.js',
         'typescript': 'https://npmcdn.com/typescript@1.8.10/lib/typescript.js',
+        '@angular2-material/core': '/node_modules/core'
     };
+    components.forEach(name => map[`@angular2-material/${name}`] = `/node_modules/@angular2-material/${name}`);
 
     //packages tells the System loader how to load when no filename and/or no extension
     var packages = {
@@ -19,7 +38,17 @@
         'rxjs': {defaultExtension: 'js'},
         'ng2-charts': {defaultExtension: 'js'},
         'angular2-in-memory-web-api': {defaultExtension: 'js'},
+        '@angular2-material/core': {
+            format: 'cjs',
+            defaultExtension: 'js'
+        }
     };
+    components.forEach(name => {
+        packages[`@angular2-material/${name}`] = {
+            format: 'cjs',
+            defaultExtension: 'js'
+        };
+    });
 
     var ngPackageNames = [
         'common',
